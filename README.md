@@ -32,3 +32,50 @@ Jumlah total siswa di kelas adalah 48 orang.
 - **45 siswa** suka setidaknya salah satu dari kedua olahraga.
 - **3 siswa** tidak suka bulutangkis maupun sepak bola.
 - 
+
+
+
+
+
+
+# Analisis Keanggotaan Himpunan Fuzzy
+
+## Fungsi Keanggotaan Fuzzy \( \mu_A(x) \)
+
+### Nilai Keanggotaan
+- Derajat keanggotaan untuk elemen \( x = 40 \):
+  \[
+  \mu_A(40) = 0.3
+  \]
+
+- Derajat keanggotaan untuk elemen \( x = 3 \):
+  \[
+  \mu_A(3) = 0.7
+  \]
+
+### Penjelasan
+- **\(\mu_A(40) = 0.3\)**: Menunjukkan bahwa elemen 40 memiliki derajat keanggotaan sebesar 0.3 dalam himpunan fuzzy \( A \).
+- **\(\mu_A(3) = 0.7\)**: Menunjukkan bahwa elemen 3 memiliki derajat keanggotaan sebesar 0.7 dalam himpunan fuzzy \( A \).
+
+### Diagram Venn Fuzzy (Visualisasi Himpunan Fuzzy)
+
+Anda juga bisa menyertakan diagram atau grafik yang merepresentasikan fungsi keanggotaan fuzzy tersebut, misalnya dengan menggunakan matplotlib di Python atau alat grafis lainnya untuk membuat plot keanggotaan.
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Data keanggotaan
+x = np.array([3, 40])
+y = np.array([0.7, 0.3])
+
+# Plot fungsi keanggotaan fuzzy
+plt.figure(figsize=(8, 5))
+plt.plot(x, y, 'bo-', label='Fungsi Keanggotaan Fuzzy')
+plt.title('Diagram Keanggotaan Himpunan Fuzzy A')
+plt.xlabel('Elemen')
+plt.ylabel('Derajat Keanggotaan')
+plt.ylim(0, 1)
+plt.legend()
+plt.grid(True)
+plt.show()
